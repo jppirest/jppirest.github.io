@@ -1,1 +1,1 @@
-# https://github.com/jppirest/jppirest.github.io
+# jppirest.github.io
