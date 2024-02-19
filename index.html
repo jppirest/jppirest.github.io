@@ -32,8 +32,8 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="#about" class="active">About Me</a></li>
+						<li><a href="#research">Research</a></li>						
 						<li><a href="#education">Education</a></li>
-						<li><a href="#research">Research</a></li>
 						<li><a href="#skills">Skills</a></li>
 						<li><a href="#contact">Contact Me</a></li>
 					</ul>
@@ -65,44 +65,14 @@
 												<p>My name is João Pedro Pires Thomaz.</p>
 											</header>
 											<p>I'm a M.Sc student at the <a href="https://dcc.ufmg.br/en/homepage/" target="_blank">Department of Computer Science, UFMG</a>.  
-											<br>As a deep learning and data science researcher, my studies encompass a broad range of areas, including algorithm development, architectural design, machine learning theory, and practical applications. 
-											<br>I focus on applying and creating solutions to address real-world complex problems. </p>
-											<p>Funded by <a href="https://petrobras.com.br/en/" target="_blank" >Petrobras</a>, I am a member of GODeep (Geoscience Oriented Deep Learning), a research group studying deep learning approaches to solve geoscience problems. </p>
+											<br>As a deep learning and data science researcher, my studies encompass a broad range of areas, including architectural design, machine learning theory, and practical applications. 
+											<br>I focus on creating solutions to address real-world complex problems through probabilistic machine learning. </p>
+											<p>Funded by <a href="https://petrobras.com.br/en/" target="_blank" >Petrobras</a>, I am a member of GoDeep (Geoscience Oriented Deep Learning), a research group studying deep learning approaches to solve geoscience problems. Moreover, my research extends to generative models across a wide spectrum of contexts, ranging from stochastic forecasting to anomaly detection.</p>
 											<p>Before moving to Computer Science, as a Physics major funded by <a href="https://www.gov.br/cnpq/pt-br" target="_blank" >CNPq</a>, I worked as an observational astronomer. Using <a href = "https://gaia.aip.de/cms/data/gdr3/">Gaia DR3</a> data, I applied unsupervised learning algorithms to characterize stellar clusters.</p>
 											<p>When I'm not doing research, I enjoy playing board games with my friends, watching TV shows, reading, and playing tennis.</p>
 											<p><a href="http://lattes.cnpq.br/9414757376482900" target="_blank"  class="button primary icon solid fa-magnifying-glass">Browse my CV</a></p>
 								</div>
-							</section>
-						<section id="education">
-							<div class="container">
-								<header class="major">
-									<h3>Education</h3>
-								</header>
-								<div class="container22">
-
-									<div class="timeline-block timeline-block-right">
-									<div class="marker"></div>
-									<div class="timeline-content">
-										<h3>2023-Present</h3>
-										<strong>M.Sc Computer Science, UFMG</strong>
-										<p>Research on Deep Learning and Data Science.</p>
-									</div>
-									</div>
-								
-									<div class="timeline-block timeline-block-left">
-									<div class="marker"></div>
-									<div class="timeline-content">
-										<h3>2019-2022</h3>
-										<strong>B.Sc Physics, UFMG</strong>
-										<p>Concentration in Astrophysics and Computational Physics</p>
-									</div>
-									</div>
-								</div>
-							
-								
-							</div>
-
-							
+							</section>							
 						</section>
 						<!-- Two -->
 							<section id="research">
@@ -112,11 +82,49 @@
 									</header>
 									<!-- <p>I am mainly interested in Data Science.
 									<br>From Deep Learning to "Classical" Machine Learning algorithms, I study these models.... -->
-									<h4>Past research</h4>
+									<h4>Current research</h4>
+									<div class="features">
+										<article>
+											<div class="image">
+											<figure>
+												<img src="images/anomalous_data.jpg" alt="MNIST anomalous data"/>
+
+												<!-- <figcaption> MNIST anomalous digits </figcaption> -->
+											  </figure>
+											</div>
+											
+											<div class="inner" data-text="nfs">
+												<span class="title"><h4>Anomaly detection using NFs</h4></span>
+												<p>I study how to detect and infer anomalous data in the context of likelihood estimation.
+												<span class="more" style="display: none;">
+												<br /><br />Normalizing Flows (NFs) are a powerful class of generative models.
+												<br /><br />Its ability to directly compute likelihood allow for a stable and efficient training.
+												<br /><br />Using deep architectures we can model the data distribution. Apart from generating new samples, the likelihood of samples are easily obtained.
+											</span>
+												<br /><br /><button class="button myBtn" onclick="readMore('nfs')">Learn more</button></p>
+											</div>
+										</article>
+										
+										<article>
+											<div class="image"><img src="images/seismicslice.png" alt="Seismic slice from the Wu's dataset (DOI:10.1190/geo2019-0375.1)" /></div>
+											<div class="inner" data-text="seis">
+												<span class="title"><h4>Seismic fault detection</h4></span>
+												<p>As part of my Petrobras research, I study and develop automatic seismic interpretation tools.
+												<span class="more" style="display: none;">
+												<br /><br />Faults are closely linked to hydrocarbon transport. They can be used for geological structural modeling, well location screening, and
+												tectonic analysis.
+												<br /><br />Given the complex and challenging nature of seismic data, DL architectures are being used to automate seismic interpretation.
+												<br /><br />I explored a diverse array of architectures to address the problem of fault detection. An upcoming benchmark article with our results will soon be available!
+											</span>
+												<br /><br /><button class="button myBtn" onclick="readMore('seis')">Learn more</button></p>
+											</div>
+										</article>
+									
+										<h4>Past research</h4>
 									<div class="features">
 										<article>
 											<div class="image"><img src="images/isochrone.jpg" alt="" /></div>
-											<div class="inner" data-text="void">
+											<div class="inner" data-text="iso">
 												<span class="title"><h4>Automatic isochrone fitting</h4></span>
 												<p>I studied how to automatically fit isochrones to a star cluster in a colour-magnitude diagram.
 												<span class="more" style="display: none;">
@@ -124,7 +132,7 @@
 												<br /><br />Although very reliable, these curves are mainly fitted manually. This makes impractical to study thousands of clusters, not to mention author divergence.
 												<br /><br />Using parallelism, I made a CPU-bound algorithm that outruns existing MCMC routines.
 											</span>
-												<br /><br /><button class="button myBtn" onclick="readMore('void')">Learn more</button></p>
+												<br /><br /><button class="button myBtn" onclick="readMore('iso')">Learn more</button></p>
 											</div>
 										</article>
 										<article>
@@ -158,6 +166,34 @@
 									</div>
 									<div class="container">
 								</div>
+								<section id="education">
+									<div class="container">
+										<header class="major">
+											<h3>Education</h3>
+										</header>
+										<div class="container22">
+		
+											<div class="timeline-block timeline-block-right">
+											<div class="marker"></div>
+											<div class="timeline-content">
+												<h3>2023-Present</h3>
+												<strong>M.Sc Computer Science, UFMG</strong>
+												<p>Research on Deep Learning and Data Science.</p>
+											</div>
+											</div>
+										
+											<div class="timeline-block timeline-block-left">
+											<div class="marker"></div>
+											<div class="timeline-content">
+												<h3>2019-2022</h3>
+												<strong>B.Sc Physics, UFMG</strong>
+												<p>Concentration in Astrophysics and Computational Physics</p>
+											</div>
+											</div>
+										</div>
+									
+										
+									</div>
 							</section>
 							<!-- Four -->
 							<section id="skills">
