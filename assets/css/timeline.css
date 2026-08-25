@@ -50,6 +50,10 @@
     float: left;
     direction: rtl
   }
+
+  .timeline-block-left .timeline-content {
+    direction: ltr;
+  }
   
   .marker {
     width: 16px;
