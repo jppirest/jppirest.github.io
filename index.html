@@ -25,16 +25,16 @@
 		<!-- Header -->
 			<section id="header">
 				<header>
-					<span class="image avatar"><img src="images/avatar_new.jpeg" alt="" /></span>
+					<span class="image avatar"><img src="images/profile.jpeg" alt="" /></span>
 					<h1 id="logo"><a href="#">João Pedro Pires T.</a></h1>
 					<p>  <i class="fas fa-globe-americas"></i>&nbsp; Belo Horizonte - MG, Brazil </p>
 				</header>
 				<nav id="nav">
 					<ul>
 						<li><a href="#about" class="active">About me</a></li>
-						<li><a href="#experience">Experience</a></li>			
-						<li><a href="#research">Research</a></li>						
+						<li><a href="#experience">Experience</a></li>
 						<li><a href="#education">Timeline</a></li>
+						<li><a href="#research">Research</a></li>
 						<li><a href="#publications">Publications</a></li>
 						<!-- <li><a href="#skills">Skills</a></li> -->
 						<li><a href="#contact">Contact Me</a></li>
@@ -140,6 +140,65 @@
 								</div>
 							</div>
 						</section>
+
+							<section id="education">
+								<div class="container">
+									<header class="major">
+										<h3>Timeline</h3>
+									</header>
+									<div class="container22">
+
+										<div class="timeline-block timeline-block-right">
+										<div class="marker"></div>
+										<div class="timeline-content">
+											<h3>2026-Present</h3>
+											<strong>Sorenson</strong><br>
+											<strong>AI Data Science Specialist</strong>
+											<p>Deep learning models for English to ASL translation.</p>
+										</div>
+										</div>
+
+										<div class="timeline-block timeline-block-left">
+										<div class="marker"></div>
+										<div class="timeline-content">
+											<h3>2025-2026</h3>
+											<strong>Big Data</strong><br>
+											<strong>Senior Data Scientist</strong>
+											<p>ML models for real-time retail and wholesale predictions.</p>
+										</div>
+										</div>
+
+										<div class="timeline-block timeline-block-right">
+										<div class="marker"></div>
+										<div class="timeline-content">
+											<h3>2023-2025</h3>
+											<strong>Petrobras</strong><br>
+											<strong>Research Scientist</strong>
+											<p>Deep learning for automated seismic interpretation.</p>
+										</div>
+										</div>
+
+										<div class="timeline-block timeline-block-left">
+										<div class="marker"></div>
+										<div class="timeline-content">
+											<h3>2023-Present</h3>
+											<strong>M.Sc Computer Science, UFMG</strong>
+											<p>Research on Deep Learning and Generative Modelling.</p>
+										</div>
+										</div>
+
+										<div class="timeline-block timeline-block-right">
+										<div class="marker"></div>
+										<div class="timeline-content">
+											<h3>2019-2022</h3>
+											<strong>B.Sc Physics, UFMG</strong>
+											<p>Concentration in Astrophysics and Computational Physics</p>
+										</div>
+										</div>
+									</div>
+								</div>
+							</section>
+
 						<!-- Two -->
 							<section id="research">
 								<div class="container">
@@ -151,6 +210,37 @@
 									<h4>Current research</h4>
 									<div class="features">
 										<article>
+											<div class="image"><img src="images/mogr_loss_surface.png" alt="Pointwise loss on two-moons data, weighted by the Hessian trace and Frobenius norm" /></div>
+											<div class="inner" data-text="mogr">
+												<span class="title"><h4>Manifold-Oriented Gradient Regularization</h4></span>
+												<p>I study how to anchor decision boundaries to the intrinsic geometry of the data manifold.
+												<span class="more" style="display: none;">
+												<br /><br />Standard training lets decision boundaries cut blindly through the empty, low-density space between samples, leaving models fragile to adversarial perturbations and overconfident off-manifold.
+												<br /><br />I show that making the loss invariant to random, isotropic perturbations of the input is mathematically equivalent to regularizing the loss gradient with the score of the data distribution, via Stein's Identity.
+												<br /><br />This ties the learning process directly to the data manifold, forcing the network to rely only on gradients that are geometrically meaningful, rather than ones shaped by noise in empty ambient space.
+											</span>
+												<br /><br /><button class="button myBtn" onclick="readMore('mogr')">Learn more</button></p>
+											</div>
+										</article>
+
+										<article>
+											<div class="image"><img src="images/mogr_grokking_curve.png" alt="Validation accuracy on modular division, standard training vs. score-regularized training" /></div>
+											<div class="inner" data-text="lora">
+												<span class="title"><h4>Faster Convergence via Score-Guided Fine-Tuning</h4></span>
+												<p>I study optimization and fine-tuning techniques for efficient LoRA and learning transfer.
+												<span class="more" style="display: none;">
+												<br /><br />Because MOGR regularizes the loss with the score of the data distribution, it shapes decision boundaries that are more effective and geometrically meaningful earlier in training.
+												<br /><br />On modular division tasks, score-regularized models reach high validation accuracy in a fraction of the optimization steps needed by standard training, closely related to the grokking phenomenon.
+												<br /><br />I'm extending this to LoRA and other parameter-efficient fine-tuning setups, where faster, more reliable convergence directly cuts the cost of adapting large models.
+											</span>
+												<br /><br /><button class="button myBtn" onclick="readMore('lora')">Learn more</button></p>
+											</div>
+										</article>
+									</div>
+
+										<h4>Past research</h4>
+									<div class="features">
+										<article>
 											<div class="image">
 											<figure>
 												<img src="images/anomalous_data.jpg" alt="MNIST anomalous data"/>
@@ -158,7 +248,7 @@
 												<!-- <figcaption> MNIST anomalous digits </figcaption> -->
 											  </figure>
 											</div>
-											
+
 											<div class="inner" data-text="nfs">
 												<span class="title"><h4>Anomaly detection using NFs</h4></span>
 												<p>I study how to detect and infer anomalous data in the context of likelihood estimation.
@@ -170,7 +260,7 @@
 												<br /><br /><button class="button myBtn" onclick="readMore('nfs')">Learn more</button></p>
 											</div>
 										</article>
-										
+
 										<article>
 											<div class="image"><img src="images/seismicslice.png" alt="Seismic slice from the Wu's dataset (DOI:10.1190/geo2019-0375.1)" /></div>
 											<div class="inner" data-text="seis">
@@ -185,9 +275,7 @@
 												<br /><br /><button class="button myBtn" onclick="readMore('seis')">Learn more</button></p>
 											</div>
 										</article>
-									
-										<h4>Past research</h4>
-									<div class="features">
+
 										<article>
 											<div class="image"><img src="images/isochrone.jpg" alt="" /></div>
 											<div class="inner" data-text="iso">
@@ -233,66 +321,6 @@
 									<div class="container">
 								</div>
 								<br>
-								
-								<section id="education">
-									<div class="container">
-										<header class="major">
-											<h3>Timeline</h3>
-										</header>
-										<div class="container22">
-
-											<div class="timeline-block timeline-block-right">
-											<div class="marker"></div>
-											<div class="timeline-content">
-												<h3>2026-Present</h3>
-												<strong>Sorenson</strong><br>
-												<strong>AI Data Science Specialist</strong>
-												<p>Deep learning models for English to ASL translation.</p>
-											</div>
-											</div>
-
-											<div class="timeline-block timeline-block-left">
-											<div class="marker"></div>
-											<div class="timeline-content">
-												<h3>2025-2026</h3>
-												<strong>Big Data</strong><br>
-												<strong>Senior Data Scientist</strong>
-												<p>ML models for real-time retail and wholesale predictions.</p>
-											</div>
-											</div>
-
-											<div class="timeline-block timeline-block-right">
-											<div class="marker"></div>
-											<div class="timeline-content">
-												<h3>2023-2025</h3>
-												<strong>Petrobras</strong><br>
-												<strong>Research Scientist</strong>
-												<p>Deep learning for automated seismic interpretation.</p>
-											</div>
-											</div>
-
-											<div class="timeline-block timeline-block-left">
-											<div class="marker"></div>
-											<div class="timeline-content">
-												<h3>2023-Present</h3>
-												<strong>M.Sc Computer Science, UFMG</strong>
-												<p>Research on Deep Learning and Generative Modelling.</p>
-											</div>
-											</div>
-
-											<div class="timeline-block timeline-block-right">
-											<div class="marker"></div>
-											<div class="timeline-content">
-												<h3>2019-2022</h3>
-												<strong>B.Sc Physics, UFMG</strong>
-												<p>Concentration in Astrophysics and Computational Physics</p>
-											</div>
-											</div>
-										</div>
-									
-										
-									</div>
-							</section>
 							<!-- Four -->
 							<!-- <section id="skills">
 								<div class = "container">
